@@ -25,6 +25,14 @@ describe('Updating records',() => {
         })
     });
 
+    it('Increments the weight by one',(done) => {
+        MarioChar.update({}, {$inc: {weight:1}}).then(() => {
+            MarioChar.findOne({name:'Nicha'}).then((record) => {
+                assert(record.weight === 46)
+                done()
+            })
+        })
+    });
     
     // Next test
     
