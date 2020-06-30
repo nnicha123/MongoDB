@@ -11,7 +11,6 @@ describe('Finding records',() => {
             weight:45
         })
         char.save().then(() => {
-            assert(char.isNew === false) //Check that its not new, already saved to database (because in the 'then' - should finish by now)
             done();
         })
     })
