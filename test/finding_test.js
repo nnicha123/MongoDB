@@ -3,8 +3,10 @@ const MarioChar = require('../models/mariochar')
 // Describe tests
 describe('Finding records',() => {
 
+    let char;
+
     beforeEach((done) => {
-        var char = new MarioChar({
+            char = new MarioChar({
             name:'Nicha',
             weight:45
         })
@@ -15,9 +17,16 @@ describe('Finding records',() => {
     })
 
     // Create tests
-    it('Find one record from the database',(done) => {
+    it('Finds one record by name from the database',(done) => {
         MarioChar.findOne({name:'Nicha'}).then((result)=>{
             assert(result.name === 'Nicha')
+            done()
+        })
+    });
+
+    it('Finds one record by id from the database',(done) => {
+        MarioChar.findOne({_id:char._id}).then((result)=>{
+            assert(result._id.toString() === char._id.toString())
             done()
         })
     });
