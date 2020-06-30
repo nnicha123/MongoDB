@@ -1,0 +1,22 @@
+{
+  "name": "mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "posts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nnicha123/MongoDB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nnicha123/MongoDB/issues"
+  },
+  "homepage": "https://github.com/nnicha123/MongoDB#readme",
+  "dependencies": {
+    "mongoose": "^5.9.20"
+  }
+}
