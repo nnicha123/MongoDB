@@ -12,4 +12,13 @@ before((done) => {
         done()
     }).on('error', (error) => console.log('Connection Error! ', error)) //on used to watch our for error everytime, once used to establish connection only at the start
     
+});
+
+// Drops the characters collection everytime before each test
+beforeEach((done) => {
+    // Drop the collection
+    mongoose.connection.collections.mariochars.drop(() => {
+        done()
+    })
+    
 })
